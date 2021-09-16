@@ -35,43 +35,68 @@
             tools:ignore="MissingConstraints"
             android:id="@+id/Linear2"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
         <Button
-                android:id="@+id/button_clear"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/reset"
-                android:height="120dp"
-                android:textSize="29dp"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                style="?android:attr/borderlessButtonStyle"/>
+            android:id="@+id/button_clear"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:height="120dp"
+            android:text="@string/reset"
+            android:textColor="@color/white"
+            android:textSize="29dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
-            android:id="@+id/button_percent"
+            android:id="@+id/button_square"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="29dp"
-            android:text="%"
+            android:text="^"
             android:height="120dp"
-
                 android:textColor="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/button2"
                 app:layout_constraintTop_toTopOf="parent"
                 style="?android:attr/borderlessButtonStyle"/>
         <Button
+            android:id="@+id/button_squareRoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="29dp"
+            android:text="\u221A"
+            android:height="120dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
                 android:id="@+id/button_openParentheses"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="(           )"
+                android:text="("
                 android:height="120dp"
                 android:textSize="29dp"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/button3"
                 app:layout_constraintTop_toTopOf="parent"
                 style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:id="@+id/button_closedParentheses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=")"
+            android:height="120dp"
+            android:textSize="29dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/borderlessButtonStyle"/>
 
 
     </LinearLayout>
@@ -121,9 +146,20 @@
                     style="?android:attr/borderlessButtonStyle"/>
 
             <Button
+                android:id="@+id/button_div"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="100dp"
+                android:text="/"
+                android:textColor="@color/blue"
+                android:textSize="38dp" />
+
+            <Button
                 android:id="@+id/button_del"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:height="100dp"
@@ -183,12 +219,12 @@
                     android:textColor="@color/blue"
                     style="?android:attr/borderlessButtonStyle"/>
             <Button
-                android:id="@+id/button_division"
+                android:id="@+id/button_percent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="29dp"
-                android:text="\u00F7"
+                android:text="%"
                 android:height="100dp"
                     android:textColor="@color/blue"
                     style="?android:attr/borderlessButtonStyle"/>
@@ -289,16 +325,18 @@
                     android:text="9"
                     android:textColor="@color/black"
                     style="?android:attr/borderlessButtonStyle"/>
+
             <Button
-                    android:id="@+id/button_subtraction"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="29dp"
-                    android:text="-"
+                android:id="@+id/button_subtraction"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:height="100dp"
-                    android:textColor="@color/blue"
-                    style="?android:attr/borderlessButtonStyle"/>
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="29dp" />
+
             <Button
                     android:id="@+id/button_addition"
                     android:layout_width="0dp"
