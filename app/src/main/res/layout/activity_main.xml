@@ -273,8 +273,18 @@
                     style="?android:attr/borderlessButtonStyle" />
 
             <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="100dp"
+                android:text=""
+                android:clickable="false"
+                android:textColor="@color/black"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
                     android:id="@+id/button_equal"
-                    android:layout_width="80dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                 android:height="100dp"
                     android:layout_weight="1"

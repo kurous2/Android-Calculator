@@ -167,6 +167,7 @@ public final class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 } else {
                     String lastExpression = temp.substring(temp.length() - 1);
+
                     if (lastExpression.equals("+")) {
                         setInputText("");
                     } else {
@@ -176,12 +177,13 @@ public final class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         buttonSubtraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String temp = textViewInputNumbers.getText().toString();
                 if (temp.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                    setInputText("-");
                 } else {
                     String lastExpression = temp.substring(temp.length() - 1);
                     if (lastExpression.equals("-")) {
@@ -193,6 +195,7 @@ public final class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -236,7 +239,7 @@ public final class MainActivity extends AppCompatActivity {
                 } else {
                     boolean isValid = false;
                     for (int i = 0; i < inputText.length(); i++) {
-                        if (!isNumeric(inputText.charAt(i))) {
+                        if (!isNumeric(inputText.charAt(i))&&inputText.charAt(0)!='-') {
                             isValid = false;
                             break;
                         } else
@@ -246,7 +249,8 @@ public final class MainActivity extends AppCompatActivity {
                     if (isValid) {
                         System.out.println(isValid);
                         double percentage = Double.parseDouble(inputText)/100;
-                        textViewInputNumbers.setText(String.valueOf(percentage));
+                        inputText = String.valueOf(percentage);
+                        textViewInputNumbers.setText(inputText);
                     } else
                         Toast.makeText(getApplicationContext(), "Wrong Format", Toast.LENGTH_SHORT).show();
 
@@ -335,7 +339,6 @@ public final class MainActivity extends AppCompatActivity {
                     textViewInputNumbers.setText(String.valueOf(inputText));
             }
         });
-
     }
 
     private void checkForPowerOf() {
