@@ -331,6 +331,10 @@ public final class MainActivity extends AppCompatActivity {
                 try {
                     result = (double) engine.eval(formula);
                     inputText = String.valueOf(result.doubleValue());
+                    if(inputText == "Infinity"){
+                        inputText = "";
+                        Toast.makeText(getApplicationContext(), "Div by 0", Toast.LENGTH_SHORT).show();
+                    }
                 } catch (ScriptException e) {
                     Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_SHORT).show();
                 }
